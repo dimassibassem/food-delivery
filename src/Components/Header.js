@@ -3,19 +3,13 @@ import {
   SearchRounded,
   ShoppingCartRounded,
 } from "@mui/icons-material";
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 
 function Header() {
 
     const cart = useSelector((state) => state?.cart?.currentCart);
-  useEffect(() => {
-    const toggleIcon = document.querySelector(".toggleMenu");
-    toggleIcon.addEventListener("click", () => {
-      document.querySelector(".rightMenu").classList.toggle("active");
-    });
-  }, []);
 
   return (
     <header>
@@ -47,7 +41,7 @@ function Header() {
         <h2 className="userName">Mosbah Oussama</h2>
       </div>
 
-      <div className="toggleMenu">
+      <div className="toggleMenu" onClick={() => document.querySelector(".rightMenu").classList.toggle("active")}>
         <BarChart className="toggleIcon" />
       </div>
     </header>

@@ -140,6 +140,7 @@ function App() {
             </div>
           </div>
         </div>
+
         <div className="rightMenu">
           <div className="debitCardContainer">
             <div className="debitCard">
